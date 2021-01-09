@@ -147,13 +147,13 @@
 	<p>
 		pada dasarnya saya menuliskan funciton ini karna males untuk menuliskan hal yang sama secara berulang ulang , jadi , ketika kita ingin menghapus filee , dalan memberikan konfirmasi apakah yakin ingin menhapus data ini atau tidk kita bisa cukup dengan memanggil 
 		<p>konfirmasiHapus</p>
-		contoh penggunaan
+		contoh penggunaan <br>
 		<i>
-			konfirmasiHapus.fire().then((result)=>{
-				if(result.isConfirme){
-				melakukan penghapusan
-				}
-			})
+			konfirmasiHapus.fire().then((result)=>{ <br>
+				if(result.isConfirme){ <br>
+				melakukan penghapusan <br>
+				}<br>
+			})<br>
 		</i>
 	</p>
 
