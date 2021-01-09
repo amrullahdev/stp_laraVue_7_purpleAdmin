@@ -3,7 +3,7 @@ require('./bootstrap');
 require('./kostum/adminTemplate/phone_mode');
 require('./kostum/adminTemplate/misc');
 require('./mask');
-require('./kostum/kostum');
+// require('./kostum/kostum');
 
 import VModal from 'vue-js-modal'
 import router from './kostum/router/router'
@@ -58,51 +58,6 @@ Vue.filter('IDR',function(data){
 	return idr.format(data);
 })
 // =====
-
-
-// KOSTUM FILTER
-Vue.filter('STOK',function(data){
-    if (data == 0) {
-        return ' <span class="badge badge-secondary small mb-2"> <i class="mdi mdi-cart-off"></i> Habis </span>'
-    }else{
-        return ' <span class="badge badge-success small mb-2"> '+data+' Tersedia </span>'
-    }
-})
-
-Vue.filter('status_pemesanan',function(data){
-    let status
-    let badge
-    if (data == 0) {
-        status='Menunggu Pembayaran'
-        badge="secondary"
-    }
-    if (data == 1) {
-        status='Pengemasan'
-        badge="primary"
-    }
-    if (data == 2) {
-        status='Pengiriman'
-        badge="info"
-    }
-    if (data == 3) {
-        status='Diterima'
-        badge="success"
-    }
-    if (data == 5) {
-        status='Ditolak'
-        badge="danger"
-    }
-    return '<span class="badge badge-'+badge+'">'+status+'</span>'
-})
-
-Vue.filter('bukti_pembayaran',function(data){
-    let status
-    if (data == 0){return 'Upload Bukti Pembayaran'}else{return 'Diterima'}
-})
-
-  
-// ==========
-
 
 //  money component
 import money from 'v-money'

@@ -81996,9 +81996,8 @@ __webpack_require__(/*! ./kostum/adminTemplate/phone_mode */ "./resources/js/kos
 
 __webpack_require__(/*! ./kostum/adminTemplate/misc */ "./resources/js/kostum/adminTemplate/misc.js");
 
-__webpack_require__(/*! ./mask */ "./resources/js/mask.js");
+__webpack_require__(/*! ./mask */ "./resources/js/mask.js"); // require('./kostum/kostum');
 
-__webpack_require__(/*! ./kostum/kostum */ "./resources/js/kostum/kostum.js");
 
 
 
@@ -82046,55 +82045,6 @@ var idr = new Intl.NumberFormat('en-US', {
 Vue.filter('IDR', function (data) {
   return idr.format(data);
 }); // =====
-// KOSTUM FILTER
-
-Vue.filter('STOK', function (data) {
-  if (data == 0) {
-    return ' <span class="badge badge-secondary small mb-2"> <i class="mdi mdi-cart-off"></i> Habis </span>';
-  } else {
-    return ' <span class="badge badge-success small mb-2"> ' + data + ' Tersedia </span>';
-  }
-});
-Vue.filter('status_pemesanan', function (data) {
-  var status;
-  var badge;
-
-  if (data == 0) {
-    status = 'Menunggu Pembayaran';
-    badge = "secondary";
-  }
-
-  if (data == 1) {
-    status = 'Pengemasan';
-    badge = "primary";
-  }
-
-  if (data == 2) {
-    status = 'Pengiriman';
-    badge = "info";
-  }
-
-  if (data == 3) {
-    status = 'Diterima';
-    badge = "success";
-  }
-
-  if (data == 5) {
-    status = 'Ditolak';
-    badge = "danger";
-  }
-
-  return '<span class="badge badge-' + badge + '">' + status + '</span>';
-});
-Vue.filter('bukti_pembayaran', function (data) {
-  var status;
-
-  if (data == 0) {
-    return 'Upload Bukti Pembayaran';
-  } else {
-    return 'Diterima';
-  }
-}); // ==========
 //  money component
 
 
@@ -82580,21 +82530,6 @@ var entahNamaDariClassKurangPenting = /*#__PURE__*/function () {
 }();
 
 
-
-/***/ }),
-
-/***/ "./resources/js/kostum/kostum.js":
-/*!***************************************!*\
-  !*** ./resources/js/kostum/kostum.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$(document).ready(function () {
-  $('.rupiah').mask("#.##0.000", {
-    reverse: true
-  });
-});
 
 /***/ }),
 

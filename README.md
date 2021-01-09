@@ -78,7 +78,7 @@
 	</li>
 </ul>
 
-<h1>Sedikit Dokumentasi Pengodean </h1>
+<h1>Sedikit Dokumentasi Pengkodean </h1>
 <p> untuk file vue pada stp ini terdapat pada folder </strong>resources/vue-views<br></p>
 <ul>
 	<li>Vue Js Router</li>
