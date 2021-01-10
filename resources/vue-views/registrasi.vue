@@ -2,7 +2,7 @@
     <div>
         <div class="row">
             <div class="col-md"></div>
-            <div class="col-md">
+            <div class="col-md-5">
                 <div class="bg-white p-2 rounded bs-1">
                     <div class="mt-5 pb-1 text-center font-weight-bold h3">
                         Daftar akun baru
@@ -46,7 +46,7 @@
                                 </div>
                                 <has-error :form="form" field="password"></has-error>
                             </div>
-                            <div class="form-group">
+            <!--                 <div class="form-group">
                                 <vue-recaptcha 
                                 sitekey="6LcreRQaAAAAAC5G6evH5dfh70UxYKLekCdsVezQ"  
                                 class="g-recaptcha" 
@@ -56,7 +56,7 @@
                                 >
                                     
                                 </vue-recaptcha>
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <button class=" btn btn-primary btn-block">
                                     Registrasi Akun
@@ -84,7 +84,7 @@ export default {
     data() {
         return {
             typeInput: false,
-            captcha:false,
+            captcha:true, //jika ingin menggunakan captcha ubah jadi : false,
             form: new Form({
                 nama: '',
                 email: '',

@@ -2059,7 +2059,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      captcha: false,
+      captcha: true,
+      //jika ingin menggunakan captcha ubah jadi : false,
       registrasi: false,
       telah_registrasi: false,
       typeInput: false,
@@ -2218,7 +2219,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       typeInput: false,
-      captcha: false,
+      captcha: true,
+      //jika ingin menggunakan captcha ubah jadi : false,
       form: new Form({
         nama: '',
         email: '',
@@ -66109,23 +66111,6 @@ var render = function() {
                               ])
                             ]),
                             _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "form-group" },
-                              [
-                                _c("vue-recaptcha", {
-                                  ref: "recaptcha",
-                                  staticClass: "g-recaptcha",
-                                  attrs: { sitekey: _vm.$captKey },
-                                  on: {
-                                    verify: _vm.onCaptchaVerified,
-                                    expired: _vm.onCaptchaExpired
-                                  }
-                                })
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
                             _c("div", { staticClass: "form-group" }, [
                               _c(
                                 "button",
@@ -66205,7 +66190,7 @@ var render = function() {
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md" }),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md" }, [
+      _c("div", { staticClass: "col-md-5" }, [
         _c("div", { staticClass: "bg-white p-2 rounded bs-1" }, [
           _c(
             "div",
@@ -66380,25 +66365,6 @@ var render = function() {
                     _vm._v(" "),
                     _c("has-error", {
                       attrs: { form: _vm.form, field: "password" }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group" },
-                  [
-                    _c("vue-recaptcha", {
-                      ref: "recaptcha",
-                      staticClass: "g-recaptcha",
-                      attrs: {
-                        sitekey: "6LcreRQaAAAAAC5G6evH5dfh70UxYKLekCdsVezQ"
-                      },
-                      on: {
-                        verify: _vm.onCaptchaVerified,
-                        expired: _vm.onCaptchaExpired
-                      }
                     })
                   ],
                   1

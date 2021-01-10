@@ -48,7 +48,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <vue-recaptcha 
                                     :sitekey="$captKey"  
                                     class="g-recaptcha" 
@@ -58,7 +58,7 @@
                                     >
                                         
                                     </vue-recaptcha>
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <button class=" btn btn-primary btn-block">
                                         Login
@@ -90,7 +90,7 @@ export default {
     },
     data() {
         return {
-            captcha:false,
+            captcha:true, //jika ingin menggunakan captcha ubah jadi : false,
             registrasi: false,
             telah_registrasi: false,
             typeInput: false,
